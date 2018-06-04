@@ -4,7 +4,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Pacifico|Press+Start+2P|Fredericka+the+Great" rel="stylesheet">
+    <link rel="stylesheet" href="animate.css">
     <link rel="stylesheet" href="style.css">
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
     <title>MT Code</title>
 </head>
@@ -30,7 +32,10 @@
         </ul>
     </nav>
     <section class="main" style="background-image: url('/bg.jpeg')">
-        <div class="main__caption">
+        <div class="welcome">
+           <div class="txt anim-text-flow">
+               Zrobia strona, dej dolary!
+           </div>
             <ul class="specs">
                 <li class="spec__brand">
                     branding
@@ -70,4 +75,11 @@
         </div>
     </footer>
 </body>
+<script>
+    $('.txt').html(function(i, html) {
+  var chars = $.trim(html).split("");
+
+  return '<span>' + chars.join('</span><span>') + '</span>';
+});
+</script>
 </html>

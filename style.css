@@ -5,17 +5,18 @@
 }
 .navigation {
     position: absolute;
+    display: flex;
+    flex-flow:row nowrap;
     padding: 1.2em;
     left: 0;
     right: 0;
-    display: flex;
 }
 .navigation > *{
-    display: inline-block;
+    display: flex;
 }
 
 .menu__item {
-    display: inline-block;
+    display: flex;
     padding: 0.8em;
     font-size: 2em;
     font-family: Calibri;
@@ -30,34 +31,58 @@
  height: 100%;
 }
 .main {
- height: 100vh;
+    height: 100vh;
 }
-.main__caption {
-    position: absolute;
-    bottom: 30%;
-    right: 20%;
+
+.welcome{
+    font-size: 4em;
 }
+
+.txt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-flow: row nowrap;
+  }
+
+.txt > span {
+    padding: 3px;
+}
+
 .specs {
-    font-size: 3.5em;
+    display: flex;
+    position: absolute;
+    bottom:0;
+    align-items: flex-end;
+    justify-content: space-around;
+
+    width: 100%;
     list-style: none;
+    font-size: 0.7em;
+    
     background: rgba(255,255,255,0.4);
-    padding: 20px 40px;
+    z-index: 100;
 }
+
 .spec__brand{
     font-family: "Pacifico";
+    margin-bottom: -20px;
 }
 .spec__site {
     font-family: "Press Start 2P";
+    margin-bottom: -7px;
 }
 .spec__store {
     font-family: "Fredericka the Great";
+    margin-bottom: -10px;
 }
 .specs-tree {
     height: 200vh;
     position: relative;
     background: #283837;
 }
-.specs-tree__button
+/*.specs-tree__button
 {
     position: absolute;
     right: 50%;
@@ -68,7 +93,7 @@
     bottom: 100%;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
-}
+}*/
 .footer {
     height: 50vh;
     background: blue;
